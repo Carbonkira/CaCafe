@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cactus Cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/featured">Feature Page</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+    </header>
+
+    <section class="contact-page-section">
+        <div class="container">
+            <!-- Form Column -->
+            <div class="form-column">
+                <div class="sec-title">
+                    <div class="title">Contact Us</div>
+                    <h2>Let's Get in Touch.</h2>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="tel" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="platform">Choose a platform:</label>
+                            <select id="platform" name="platform">
+                                <option value="email">Email</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="twitter">Twitter</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="theme-btn" onclick="redirectMockup()">Send Now</button>
+                        </div>
+                        <div class="loading-spinner"></div>
+                        <div class="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Info Column -->
+            <div class="info-column">
+                <h2>Contact Info</h2>
+                <ul class="list-info">
+                    <li><i class="fas fa-globe"></i> Pasig, Candaba, Philippines, 2013</li>
+                    <li><i class="far fa-envelope"></i> yonyysky2018@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> 09164587752</li>
+                </ul>
+                <ul class="social-icon-four">
+                    <li class="follow">Follow on:</li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CACTUS CAFE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Redirecting to Mockup Pages -->
+    <script>
+        function redirectMockup() {
+            const platform = document.getElementById("platform").value;
+            if (platform === "email") {
+                window.location.href = "/email-mockup";
+            } else if (platform === "facebook" || platform === "instagram" || platform === "twitter") {
+                window.location.href = `/social-mockup?platform=${platform}`;
+            }
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

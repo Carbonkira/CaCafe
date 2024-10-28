@@ -1,0 +1,163 @@
+header {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  background-image: url('https://cdn.discordapp.com/attachments/1214138082237095972/1286641327580385381/header.png?ex=66eea59d&is=66ed541d&hm=c59ee096cf5536bb541d81f420e332eb1c55118c755ea73b8004965020f73e84&');
+}
+
+
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.image-container img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container img:target {
+  transform: rotate(360deg);
+}
+
+.logo-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.logo-container img {
+  width: 300px;
+  height: auto;
+}
+
+.text-container {
+  flex: 2;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.text-container h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.text-container p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: #a8815d;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.text-container button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ca7300;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.text-container button:hover {
+  background-color: #6e3f00;
+}
+
+#our-drinks {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#our-drinks h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.drink-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.drink:hover {
+  background-color: #A07750;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.drink img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 50px;
+}
+
+.drink {
+  width: 22%;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.drink h3 {
+  font-weight: bold;
+  font-size: 27px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.drink p {
+  color: black;
+}
+
+.drink img {
+  width: 100%; /* Maintain aspect ratio */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Cover the entire image area */
+  border-radius: 50px;
+}
+
+.view-all-button-container {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin: 20px;
+}
+
+.view-all-header {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.view-all-button {
+  border-radius: 50px;
+  padding: 20px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.view-all-button:hover {
+  background-color: #6e3f00;
+}

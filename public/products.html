@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Café</title>
+    <link rel="website-icon" type="image/png" href="img/cactus.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/featured">Feature Page</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+    <!-- Header Image -->
+    <header>
+        <img src="img/cactus-cover.jpg" alt="Cactus Café Header" class="header-image">
+    </header>
+
+    <section class="hero">
+        <h2 class="main-heading">Welcome to Cactus Café</h2>
+        <p class="intro">We serve delicious coffee and food. We offer freshly brewed coffee and a variety of meals for any occasion. Whether you're on the go or here to relax, enjoy our friendly staff and cozy atmosphere.</p>
+    </section>
+
+    <!-- Category Filter Buttons and Search Bar -->
+    <section class="filter-and-search">
+        <div class="search-bar-container">
+            <input type="text" id="search-bar" class="visible" placeholder="Search for your favorite products...">
+            <button id="search-icon" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.397h-.001a1 1 0 0 0 .198.196l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.196-.198zm-5.248 1.56a5.5 5.5 0 1 1 7.778-7.778 5.5 5.5 0 0 1-7.778 7.778z"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Category Filter Buttons -->
+        <div class="category-filters">
+            <button class="filter-button active" data-filter="All">All</button>
+            <button class="filter-button" data-filter="Coffee">Coffee</button>
+            <button class="filter-button" data-filter="Non-Coffee">Non-Coffee</button>
+            <button class="filter-button" data-filter="Ice-Blended">Ice Blended</button>
+            <button class="filter-button" data-filter="Yogurt">Yogurt</button>
+            <button class="filter-button" data-filter="Fruit Tea">Fruit Tea</button>
+            <button class="filter-button" data-filter="Soda">Soda</button>
+            <button class="filter-button" data-filter="Yakult">Yakult</button>
+            
+        </div>
+
+        
+    </section>
+
+
+    <section class="product-list">
+        <!-- Product Items -->
+        <div class="product" data-category="Coffee">
+            <img src="img/americano.jpeg" alt="Americano" class="product-image">
+            <h4>Americano</h4>
+            <p>A strong coffee made by diluting espresso with hot water, resulting in a smooth and robust flavor.</p>
+            <p class="price">₱110.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.0)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Americano" data-price="110.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Coffee">
+            <img src="img/cappuccino.jpeg" alt="Cappuccino" class="product-image">
+            <h4>Cappuccino</h4>
+            <p>A classic Italian coffee drink made with espresso and steamed milk, topped with foamed milk for a creamy texture.</p>
+            <p class="price">₱140.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.7)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Cappuccino" data-price="140.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Coffee">
+            <img src="img/caramel-macchiato.jpeg" alt="Caramel Macchiato" class="product-image">
+            <h4>Caramel Macchiato</h4>
+            <p>A layered drink of rich espresso, steamed milk, and a sweet drizzle of caramel.</p>
+            <p class="price">₱150.00</p>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.9)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Caramel Macchiato" data-price="150.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Coffee">
+            <img src="img/latte.jpeg" alt="Latte" class="product-image">
+            <h4>Latte</h4>
+            <p>A creamy coffee drink with rich espresso, steamed milk, and a light layer of foam.</p>
+            <p class="price">₱135.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.6)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Latte" data-price="135.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Ice-Blended">
+            <img src="img/mocha-frappe.jpeg" alt="Mocha Frappe" class="product-image">
+            <h4>Mocha Frappe</h4>
+            <p>A delightful blend of coffee, chocolate, milk, and ice, topped with whipped cream and a drizzle of chocolate syrup.</p>
+            <p class="price">₱160.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.5)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Mocha Frappe" data-price="160.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Ice-Blended">
+            <img src="img/chocolate-chip-frappe.jpeg" alt="Chocolate Chip Frappe" class="product-image">
+            <h4>Chocolate Chip Frappe</h4>
+            <p>A creamy blend of chocolate chips, milk, and ice, creating a rich and indulgent drink with a perfect crunch.</p>
+            <p class="price">₱155.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.4)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Chocolate Chip Frappe" data-price="155.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Ice-Blended">
+            <img src="img/strawberry-frappe.jpeg" alt="Strawberry Frappe" class="product-image">
+            <h4>Strawberry Frappe</h4>
+            <p>A sweet and tangy blend of strawberries, milk, and ice, topped with whipped cream for a refreshing treat.</p>
+            <p class="price">₱150.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.3)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Strawberry Frappe" data-price="150.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Ice-Blended">
+            <img src="img/vanilla-frappe.jpeg" alt="Vanilla Frappe" class="product-image">
+            <h4>Vanilla Frappe</h4>
+            <p>A smooth blend of vanilla, milk, and ice, perfect for a simple yet satisfying chilled drink.</p>
+            <p class="price">₱145.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.2)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Vanilla Frappe" data-price="145.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Non-Coffee">
+            <img src="img/hot-chocolate.jpeg" alt="Hot Chocolate" class="product-image">
+            <h4>Hot Chocolate</h4>
+            <p>A rich and creamy blend of milk and chocolate, perfect for a warm and comforting treat.</p>
+            <p class="price">₱120.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.5)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Hot Chocolate" data-price="120.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Non-Coffee">
+            <img src="img/milk-tea.jpeg" alt="Classic Milk Tea" class="product-image">
+            <h4>Classic Milk Tea</h4>
+            <p>A traditional blend of black tea, milk, and sweeteners, served chilled with chewy tapioca pearls.</p>
+            <p class="price">₱130.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.4)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Classic Milk Tea" data-price="130.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Non-Coffee">
+            <img src="img/thai-tea.jpeg" alt="Thai Iced Tea" class="product-image">
+            <h4>Thai Iced Tea</h4>
+            <p>A sweet and creamy iced tea with a distinct blend of black tea, milk, and sugar, served over ice.</p>
+            <p class="price">₱135.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.3)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Thai Iced Tea" data-price="135.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        
+        <div class="product" data-category="Yogurt">
+            <img src="img/mangoe-yogurt.jpg" alt="Mango Yogurt" class="product-image">
+            <h4>Mango Yogurt</h4>
+            <p>A creamy and refreshing yogurt drink blended with sweet and tangy mango.</p>
+            <p class="price">₱145.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.6)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Mango Yogurt" data-price="145.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Yogurt">
+            <img src="img/strawberry-yogurt.jpg" alt="Strawberry Yogurt" class="product-image">
+            <h4>Strawberry Yogurt</h4>
+            <p>A blend of creamy yogurt and fresh strawberries, creating a perfect balance of sweetness and tang.</p>
+            <p class="price">₱140.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.5)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Strawberry Yogurt" data-price="140.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Yogurt">
+            <img src="img/blueberry-yogurt.jpg" alt="Blueberry Yogurt" class="product-image">
+            <h4>Blueberry Yogurt</h4>
+            <p>Creamy yogurt blended with the sweet and tart flavor of blueberries for a delightful drink.</p>
+            <p class="price">₱148.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.4)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Blueberry Yogurt" data-price="148.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Fruit Tea">
+            <img src="img/lemon-tea.jpg" alt="Lemon Fruit Tea" class="product-image">
+            <h4>Lemon Fruit Tea</h4>
+            <p>A refreshing tea infused with the bright and zesty flavor of fresh lemons.</p>
+            <p class="price">₱115.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.3)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Lemon Fruit Tea" data-price="115.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Fruit Tea">
+            <img src="img/peach-tea.jpg" alt="Peach Fruit Tea" class="product-image">
+            <h4>Peach Fruit Tea</h4>
+            <p>A sweet and aromatic tea infused with the juicy flavor of ripe peaches.</p>
+            <p class="price">₱120.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.5)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Peach Fruit Tea" data-price="120.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Fruit Tea">
+            <img src="img/passionfruit-tea.jpg" alt="Passionfruit Tea" class="product-image">
+            <h4>Passionfruit Tea</h4>
+            <p>A tropical tea with the exotic flavor of passionfruit, perfect for a vibrant, fruity refreshment.</p>
+            <p class="price">₱125.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.2)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Passionfruit Tea" data-price="125.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Soda">
+            <img src="img/lemon-soda.jpg" alt="Lemon Soda" class="product-image">
+            <h4>Lemon Soda</h4>
+            <p>A sparkling soda with a crisp and tangy lemon flavor for a refreshing experience.</p>
+            <p class="price">₱100.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.3)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Lemon Soda" data-price="100.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Soda">
+            <img src="img/rape-soda.jpg" alt="Grape Soda" class="product-image">
+            <h4>Grape Soda</h4>
+            <p>A fizzy and fruity soda with the sweet and juicy flavor of ripe grapes.</p>
+            <p class="price">₱105.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.4)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Grape Soda" data-price="105.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Soda">
+            <img src="img/strawberry-soda.jpg" alt="Strawberry Soda" class="product-image">
+            <h4>Strawberry Soda</h4>
+            <p>A fizzy soda with the sweet and tangy flavor of strawberries, perfect for a refreshing break.</p>
+            <p class="price">₱110.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.3)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Strawberry Soda" data-price="110.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Yakult">
+            <img src="img/mango-yakult.jpg" alt="Mango Yakult" class="product-image">
+            <h4>Mango Yakult</h4>
+            <p>A tangy and creamy blend of Yakult and mango, creating a refreshing and probiotic-packed drink.</p>
+            <p class="price">₱125.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.6)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Mango Yakult" data-price="125.00">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product" data-category="Yakult">
+            <img src="img/strawberry-yakult.jpg" alt="Strawberry Yakult" class="product-image">
+            <h4>Strawberry Yakult</h4>
+            <p>A delicious fusion of Yakult and strawberry, delivering a sweet, tangy, and probiotic-rich experience.</p>
+            <p class="price">₱120.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.5)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Strawberry Yakult" data-price="120.00">Add to Cart</button>
+        </div>
+        </div>
+
+        <div class="product" data-category="Yakult">
+            <img src="img/peach-yakult.jpg" alt="Peach Yakult" class="product-image">
+            <h4>Peach Yakult</h4>
+            <p>A sweet and tangy drink combining Yakult and peach for a refreshing probiotic boost.</p>
+            <p class="price">₱125.00</p>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-number">(4.4)</span>
+            </div>
+            <div class="quantity-container">
+                <input type="number" class="quantity" value="1" min="1">
+                <button class="add-to-cart" data-product="Peach Yakult" data-price="125.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>    
+
+    <footer>
+        <p>&copy; 2024 Cactus Cafe. All Rights Reserved.</p>
+    
+    </footer>
+
+    <!-- Cart Section -->
+    <div class="cart-container collapsed" id="cart-container">
+        <div class="cart-content">
+            <br>
+            <br>
+            <br>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th style="opacity: 0; border-color: white;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Items will be added dynamically -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total:</strong></td>
+                        <td colspan="2" id="total-price">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="clear-cart">Clear Cart</button>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <div id="cart-toggle">
+    <button id="toggle-cart" aria-label="Toggle Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-basket3 collapsed-icon" viewBox="0 0 16 16">
+            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z"/>
+        </svg>
+    </button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

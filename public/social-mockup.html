@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing Mockup - Cactus Cafe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .social-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .social-header {
+            font-size: 24px;
+            color: #c67409;
+            margin-bottom: 15px;
+        }
+        .social-content {
+            font-size: 16px;
+            color: #333;
+            padding: 15px;
+        }
+        .social-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="social-container">
+        <div class="social-header" id="platform-header">Cactus Cafe on Social Media</div>
+        <div class="social-content">
+            <p id="platform-message">Discover the best coffee in town! Drop by Cactus Cafe and enjoy our cozy ambiance and delightful treats.</p>
+            <img src="img/featured/10.jpg" alt="Social Media Post Image" class="social-image">
+            <p><strong>#CactusCafe #CoffeeLove #CozyAmbiance</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Dynamically update the page content based on the platform parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const platform = urlParams.get('platform');
+
+        const platformHeader = document.getElementById('platform-header');
+        const platformMessage = document.getElementById('platform-message');
+
+        if (platform === 'facebook') {
+            platformHeader.textContent = 'Cactus Cafe on Facebook';
+            platformMessage.textContent = 'Like and Follow us on Facebook to stay updated with our latest offers and events!';
+        } else if (platform === 'instagram') {
+            platformHeader.textContent = 'Cactus Cafe on Instagram';
+            platformMessage.textContent = 'Follow us on Instagram for mouth-watering visuals and behind-the-scenes moments!';
+        } else if (platform === 'twitter') {
+            platformHeader.textContent = 'Cactus Cafe on Twitter';
+            platformMessage.textContent = 'Stay connected with us on Twitter for daily coffee inspiration and exciting updates!';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.infographic-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 250px;
+}
+
+.header-container {
+  position: relative;
+}
+
+.header-video {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.header-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infographic {
+  width: 350px;
+  height: auto;
+  border: 1px solid black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+}
+
+.explanation {
+  margin-left: 20px;
+  max-width: 350px;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.infographic-container:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.gallery-intro {
+  font-family: 'Impact', sans-serif;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.photo-gallery img {
+  width: 350px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
